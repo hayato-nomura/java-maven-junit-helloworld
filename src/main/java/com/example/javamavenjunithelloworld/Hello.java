@@ -26,7 +26,7 @@ public class Hello {
                     MAXIMUM_AMOUNT_OF_TIMES
             ));
         }
-        this.times = times;
+        this.times = tines;
     }
 
     /**
