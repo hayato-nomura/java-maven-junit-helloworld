@@ -42,6 +42,7 @@ pipeline {
         always {
             recordIssues enabledForFailure: true, tool: checkStyle()
             recordIssues enabledForFailure: true, tool: spotBugs()
+            stepcounter outputFile: 'count_steps', outputFormat: 'json', settings: [[encoding: 'UTF-8', filePattern: 'src/main/**/*.java', filePatternExclude: '', key: 'Java'], [encoding: 'UTF-8', filePattern: 'src/test/**/*.java', filePatternExclude: '', key: 'Java']]
         }
     }
 
