@@ -43,6 +43,7 @@ pipeline {
             recordIssues enabledForFailure: true, tool: checkStyle()
             recordIssues enabledForFailure: true, tool: spotBugs()
             stepcounter settings: [[encoding: 'UTF-8', filePattern: 'src/main/**/*.java', filePatternExclude: '', key: 'Java'], [encoding: 'UTF-8', filePattern: 'src/test/**/*.java', filePatternExclude: '', key: 'Java']]
+            jacoco()
         }
     }
 
